@@ -3,7 +3,7 @@
 import { Icon } from "@/featured/iconComponent";
 import { TPortfolio } from "@/shared/api/types";
 import { BackIcon, ClipIcon } from "@/shared/lib/icons";
-import { Spinner } from "@nextui-org/react";
+import { Button, Spinner } from "@nextui-org/react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -39,9 +39,9 @@ export const Portfolio = () => {
       <div className="flex flex-col w-full gap-8">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-[10px] cursor-pointer">
-            <span onClick={() => router.back()}>
+            <Button variant="light" onClick={() => router.back()}>
               <BackIcon />
-            </span>
+            </Button>
           </div>
           <h2 className="text-2xl font-semibold">{portfolio?.title}</h2>
           <div

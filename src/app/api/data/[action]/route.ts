@@ -22,7 +22,7 @@ export async function GET(
   }
 
   const url = new URL(request.url);
-  const id = (url.searchParams.get("id")); 
+  const id = url.searchParams.get("id"); 
 
   try {
     if (action === "allPortfolio") {
