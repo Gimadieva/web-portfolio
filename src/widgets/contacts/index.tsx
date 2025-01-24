@@ -94,7 +94,7 @@ export const Contacts = () => {
           </p>
           <div className="flex justify-between h-5/6 items-end">
             <div className={contactsIcons}>
-              <a href={`${info?.telegram}`} target="_blank">
+              <a href={`${info?.telegram}`} target="_blank" rel="noopener noreferrer">
                 <TwitterIcon />
               </a>
             </div>

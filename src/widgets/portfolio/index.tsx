@@ -66,7 +66,7 @@ export const Portfolio = () => {
           className="w-full h-[500px] object-cover rounded-lg"
           alt={portfolio?.title}
         />
-        <a href={portfolio?.url} target="_blank">
+        <a href={portfolio?.url} target="_blank" rel="noopener noreferrer">
           <div className="flex gap-2 text-blue-500">
             <ClipIcon /> Ссылка на проект
           </div>
