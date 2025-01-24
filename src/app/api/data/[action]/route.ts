@@ -5,12 +5,12 @@ import { JobService } from "@/shared/api/services/job";
 import { PortfolioService } from "@/shared/api/services/portfolio";
 import { SkillsService } from "@/shared/api/services/skills";
 import { TechnologiesService } from "@/shared/api/services/technologies";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 const cache = new Map();
 
 export async function GET(
-  request: Request,
+  request: NextRequest,
   context: { params: { action?: string } }
 ) {
   const { params } = context; 
@@ -81,7 +81,7 @@ export async function GET(
 }
 
 export async function POST(
-  request: Request,
+  request: NextRequest,
   context: { params: { action: string } }
 ) {
   const { params } = context;
@@ -117,7 +117,7 @@ export async function POST(
 }
 
 export async function DELETE(
-  request: Request,
+  request: NextRequest,
   context: { params: { action: string } }
 ) {
   const { params } = context;
