@@ -11,10 +11,10 @@ const cache = new Map();
 
 export async function GET(
   request: Request,
-  context: { params: { action: string } }
+  context: { params: { action?: string } }
 ) {
   const { params } = context; 
-  const action = await params.action; 
+  const action = params.action; 
 
   if (cache.has(action)) {
     // Возврат данных из кеша
