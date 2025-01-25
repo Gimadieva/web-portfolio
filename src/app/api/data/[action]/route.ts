@@ -9,6 +9,12 @@ import { NextRequest, NextResponse } from "next/server";
 
 const cache = new Map();
 
+type Props = {
+  params: Promise<{
+    provider: string
+  }>
+}
+
 export async function GET(
   request: NextRequest,
   context: { params: { action?: string } }

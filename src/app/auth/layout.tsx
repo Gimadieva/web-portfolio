@@ -3,6 +3,6 @@ export default function AuthLayout({
   }: {
     children: React.ReactNode;
   }) {
-    return <div className="flex flex-col items-center">{children}</div>;
+    return <div className="flex flex-col items-center grow">{children}</div>;
   }
   
